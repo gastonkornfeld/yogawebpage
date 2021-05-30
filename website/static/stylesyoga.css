@@ -1,0 +1,487 @@
+
+
+/* general categories */
+
+
+
+body {
+    background-color: ghostwhite;
+    margin: 0
+}
+footer {
+    text-align: center;
+    font-style: oblique;
+    margin: 100px 10px 50px 10px;
+}
+
+hr {
+    border: #2a35b5 1px solid;
+}
+
+p {
+    margin: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.navbar {
+    background-color: #57cc91;
+    padding: 60px 0;
+    font-size: large;
+    margin-top: 10px;
+}
+
+a {
+    color: #b58a52;    
+}
+
+
+/* special categories to change around the pages */
+
+.center {
+    text-align: center;
+}
+
+.max-width-1200 {
+    max-width: 1200px;
+}
+
+.justify-c {
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.wheat {
+    background-color: wheat;
+}
+.nav-item {
+    text-align: center;
+}
+/* here i use the bootsrapp categories for cards to change the default style */
+
+.card-title {
+    text-transform: uppercase;
+    color: #9a7d12;
+    padding: 40px
+}
+
+
+.card-body {
+    text-align: center;
+
+}
+
+/* Here all the syles from the index page */
+
+
+.header1 {
+    background-image: url(/static/images/yoga-home.jpg);
+    
+    background-size: cover;
+    margin: 0;
+    background-position: center;
+    
+
+}
+
+
+.icon-first-div{
+    color: darkcyan;
+    padding: 3px 0;
+}
+
+.icon-first-div:hover{
+    color: burlywood
+}
+
+
+.icon-last-div{
+    color:  darkcyan;
+}
+
+
+.icon-last-div:hover{
+    color:  rgb(198, 229, 211);
+}
+
+
+
+.main-jumbo-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: darkcyan;
+    
+}
+
+
+.bt-1-home {
+    align-self: center;
+}
+
+.second-section-home {
+    background-image: url(/static/images/demo12.gif);
+    
+    background-size: cover;
+    
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+.second-section-div{
+    background: rgb(177, 152, 65);
+    margin: 200px 50px 100px 50px;
+    position: relative;
+    top: 200px;
+}
+
+.second-section-second-div {
+    margin-top: 150px;
+    background-color: ghostwhite;
+    text-align: center;
+    
+}
+
+.last-div {
+    padding: 0 40px;
+}
+
+.last-div-title {
+    padding: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.index-two-divs {
+    background-color: rgb(198, 229, 211);
+    padding: 10px;
+}
+
+/* navbar styles */
+
+.logo-navbar {
+    max-width: 100px;
+    align-self: center;
+}
+
+
+
+/*  all the about me page styles here */
+
+
+.about-me-main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-about-me {
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.first-image-about-me {
+    max-width: 1200px;
+}
+
+.about-me-title{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: darkgreen;
+    
+}
+
+.about-me-second-div {
+    background-color: wheat;
+}
+
+
+/* Here the styles from the yoga blog page */
+
+
+.main-content-blog {
+
+    font-family: 'Courier New', Courier, monospace;
+    color: #a08625;
+    font-size: 20px;
+   
+    padding-bottom: 10px;
+}
+
+.card-blog {
+    
+    margin: auto;
+    background-color: rgb(162, 206, 180);
+    border: solid 2px black;
+}
+
+.blog-box {
+    max-width: 1200px; 
+    background-color: rgb(162, 206, 180);
+    border: solid 3px black;
+}
+
+
+.header3 {
+    background-image: url(/static/images/blog1.gif);
+    background-size: contain;
+  
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+.blog-title-div {
+    color: #94660f;
+    font-size: small;
+}
+
+
+/* styles from the every post details */
+
+
+.post-details {
+    background: burlywood;
+    border: solid 2px red;
+    padding: 30px 10px;
+}
+
+.post-title {
+    color: #3846ef;
+    margin: 20px;
+    padding: 20px;
+}
+
+.post-header {
+    background-image: url(/static/images/yoga-posts.jpg);
+    padding-bottom: 10px;
+    background-size: cover;
+    margin: 0;
+    
+    background-position: center;
+    
+
+}
+
+
+/* all the styles for the messages form template  */
+
+.message-form{
+    background: rgb(177, 152, 65);
+    padding: 50px;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.message-form-button {
+    color: white;
+    border: 1px solid white;
+
+}
+
+
+.message-form-button:hover {
+    background-color: white;
+    color: rgb(177, 152, 65);
+    border: 1px solid rgb(177, 152, 65);
+}
+
+.a-message-form {
+    color: darkblue;
+}
+
+
+
+/* all the syles for the leave your mail form */
+
+
+.news-form {
+    background-color: black;
+    color: white;
+    padding: 40px 70px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.message-form-link {
+    color: aquamarine;
+
+}
+
+.message-form-link:hover{
+    color: white;
+}
+
+
+/* all the styles for the courses page */
+
+.header2 {
+    background-image: url(/static/images/courses.jpg);
+    
+  
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+
+.courses-div {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color:  rgb(198, 229, 211);
+    color: black;
+    border: 2px solid black;
+}
+
+.courses-title {
+    background-color: rgb(162, 206, 180);
+}
+
+
+.course-details {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgb(162, 206, 180);
+    border: 3px solid black;
+}
+
+
+.price {
+    background: burlywood;
+    color: white;
+    border: solid chocolate;
+    font-size: larger;
+    padding: 10px;
+}
+
+
+
+/* all the styles for the recipes page */
+
+
+.ingredients {
+    padding: 40px 20px;
+    border: solid 2px darkgreen;
+    background-color: darkseagreen;
+}
+
+.preparation {
+    padding: 40px 20px;
+    border: solid 2px darkgreen;
+    background-color: burlywood;
+}
+
+
+.header4 {
+    background-image: url(/static/images/recipes.gif);
+    
+    background-size: cover;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+
+.recipes-title {
+    font-size: 50px;
+    color: black;
+    padding: 20px 5px;
+
+}
+
+.firs-div-recipe-details {
+    background-color: wheat;
+    padding: 0 30px 20px 30px;
+}
+
+.header8 {
+    background-image: url(/static/images/recipe.jpg);
+    
+    background-size: cover;
+    margin: 0;
+    
+    background-position: center;
+    
+
+}
+
+
+/* styles for the recipes category pages */
+
+.header5 {
+    background-image: url(/static/images/recipes.gif);
+    
+    background-size: cover;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    
+
+}
+
+.category-list {
+    list-style-type: square;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main-jumbo-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    
+    .first-image-about-me {
+        max-width: 940px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 960px) {
+    
+    .first-image-about-me {
+        max-width: 700px;
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 720px) {
+
+    .first-image-about-me {
+        max-width: 440px;
+    }
+}

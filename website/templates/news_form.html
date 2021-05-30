@@ -1,0 +1,35 @@
+
+
+
+     
+<div class="content-section news-form">
+    <form action="" method="POST">
+        {{ news_form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom center mb-4">Please leave your email to register. </legend>
+          <div class="form-group center">
+              {{ news_form.email.label(class='form-control-label') }}
+  
+              {% if news_form.email.errors %}
+                  {{ news_form.email(class='form-control form-control-lg is-invalid') }}
+                  <div class="invalid-feedback">
+                      {% for error in news_form.email.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  {{ news_form.email(class='form-control form-control-lg') }}
+              {% endif %}
+          </div>
+        
+        
+  
+         
+            
+        </fieldset>
+  
+        <div class="form-group center">
+            {{ news_form.submit(class='btn btn-outline-info') }}
+        </div>
+    </form>
+  </div>

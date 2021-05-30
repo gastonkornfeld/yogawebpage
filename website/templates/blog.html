@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA BLOG{% endblock %}
+
+
+{% include 'navbar.html' %} 
+{% block content%}
+
+<header class="jumbotron header3">
+  <div class="main-jumbo-index"></div>
+    
+    
+    <div>
+      <h3 style="color: burlywood; padding: 20px 5px;" class="headerjumbo center">KORNFELD NATALIA YOGA BLOG</h3>
+    </div>
+    
+  
+    
+    
+    
+    
+  </div>
+</header>
+<div class="blog-title-div center">
+  <p> The more heart centered teachings of Yoga can help us to release our clinging to these labels and see our inner light. 
+    The practice of Yoga is founded in the ancient texts of Patanjali’s Yoga Sutras. These texts are arguably where Yoga, 
+    as a philosophy or way of life, began sometime about 2,000 years ago. They describe the Yoga path to enlightenment - 
+    a guide to overcoming our “suffering”. I am fascinated at how these ancient texts still hold true today. 
+    Although very few modern day yoga practitioners are hoping for enlightenment, there is a something that Yoga can provide.
+    I believe our modern world version on "enlightenment" is joy, happiness and inner peace.
+  </p>
+  <p>Here I want to share some practices you will find usefull. </p>
+</div>
+<br>
+{% for post in posts %}
+<div class="card mb-3 blog-box">
+    <h5 class="card-title post-title center"> {{ post.title }}</h5>
+    <img class="card-img-top card-blog" src="{{ post.image_url }}" alt="Card image cap">
+    <div class="card-body">
+      
+      <p class="main-content-blog"> {{ post.main_content }}</p>
+      <p class="card-text center"><a class="btn btn-success btn-xs" href="/blog/{{ post.id }}">Enter To The Post</a></p>
+      
+      <p class="card-text center"><small> Creation date {{ post.created_at.strftime('%B %d, %Y, %H:%M') }}</small></p>
+    </div>
+  </div>
+ 
+{% if user.email == 'natikorn@gmail.com' %}
+  <p class="card-text center"><a class="btn btn-danger btn-lg" href="/delete-blog/{{ post.id }}">Delete the post {{post.title}}</a></p>
+{% endif %}
+{% endfor %}
+
+
+{% include 'message_form.html' %}
+
+{% endblock %}

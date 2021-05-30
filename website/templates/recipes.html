@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA RECIPES {% endblock %}
+
+{% include 'navbar.html' %} 
+
+{% block content%}
+
+
+
+<header class="jumbotron header5">
+  <div class="main-jumbo-categories">
+   
+    
+    <div>
+      <h3 class="headerjumbo center"> WELCOME </h3>
+    </div>
+    
+  
+    <div>
+      <h1 class="center">THIS ARE THE RECIPES FOR THIS CATEGORY.</h1>
+    </div>
+    
+  </div>
+</header>
+
+{% for recipe in recipes %}
+<div style="display: flex; justify-content: center;">
+  <div class="card mb-3" style="max-width: 1200px; background-color: wheat;">
+    <h5 class="card-title post-title center"> <strong>NAME OF THE RECIPE: </strong> {{ recipe.name }}</h5>
+      <img class="card-img-top " src="{{ recipe.image_url }}" alt="Card image cap">
+      <div class="card-body">
+        
+        <p class="card-text center"><a class="btn btn-success btn-lg" href="/recipe/{{ recipe.id }}">VIEW RECIPE</a></p>
+        
+        <p class="card-text"><small class="text-muted"> Creation date {{ recipe.created_at.strftime('%B %d, %Y, %H:%M') }}</small></p>
+      </div>
+  </div>
+</div>
+{% if user.email == 'natikorn@gmail.com' %}
+<div class="center">
+<a class="btn btn-danger btn-lg" href="/delete-recipe/{{ recipe.id }}">Delete the Recipe {{recipe.name}}</a>
+</div>
+{% endif %}
+
+{% endfor %}
+{% include 'message_form.html' %}
+
+{% endblock %}

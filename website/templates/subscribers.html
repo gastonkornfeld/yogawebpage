@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA Suscribers{% endblock %}
+
+
+
+{% block content%}
+{% if user.email == 'natikorn@gmail.com' %}
+{% include 'navbar.html' %} 
+
+<h1>Here you can see all the emails of the subscribed users</h1>
+<br>
+
+
+
+
+<section class="container-fluid p-3 my-3 bg-dark text-white">
+    
+    <h1>SUSCRIBERS</h1>
+    <table style="width:100%" class="table table-info">
+        <tr>
+            <th>Email </th>
+            <th> DATE </th>
+            <th>Delete?</th>
+            
+        </tr>
+
+{% for subs in subscribers %}
+    
+
+        <tr style="background-color: mediumseagreen;">
+            <td>{{ subs.email }}</td>
+            <td> {{ subs.created_at.strftime('%B %d, %Y, %H:%M')}}</td>
+            <td>
+                <a class="btn btn-danger btn-xs" href="/delete-suscriber/{{ subs.id }}">Delete the Suscriber</a>
+            </td>
+           
+        </tr>
+{% endfor %}
+
+
+    </table>
+  
+</section>
+{% endif %}
+{% endblock %}

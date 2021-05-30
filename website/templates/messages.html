@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}CHECK YOUR MESSAGES{% endblock %}
+
+
+
+{% block content%}
+{% include 'navbar.html' %} 
+{% if user.email == 'natikorn@gmail.com' %}
+<div class="center">
+    <h1>Here you can see all the message where send to you</h1>
+    <h2>Aqui puedes ver todos los mensajes que te han enviado en la pagina</h2>
+    <br>
+</div>
+
+
+
+<section class="container-fluid p-3 my-3 bg-dark text-white">
+    
+    <h1>MESSAGES LEAVE IN YOUR WEB PAGE. </h1>
+    <table style="width:100%" class="table table-info">
+        <tr>
+            <th> Name Of Sender </th>
+            <th> Content of message</th>
+            <th>SEND DATE</th>
+            <th>Delete?</th>
+        </tr>
+
+{% for message in messages %}
+    
+
+        <tr style="background-color: mediumseagreen;">
+            <td>{{ message.name }}</td>
+            <td> {{ message.content }}</td>
+            <td> {{ message.created_at.strftime('%B %d, %Y, %H:%M')}}</td>
+            <td>
+                <a class="btn btn-danger btn-xs" href="/delete-message/{{ message.id }}">Delete the Message</a>
+            </td>
+           
+        </tr>
+{% endfor %}
+
+
+    </table>
+  
+</section>
+{% endif %}
+{% endblock %}
+
+
+

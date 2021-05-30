@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% include 'navbar.html' %}
+{% block content%}
+
+
+
+<header class="jumbotron header1">
+  <div class="main-jumbo-index">
+    <div class="flex-column">
+      
+        <a class="icon-first-div" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="icon-first-div" href="#"><i class="fab fa-youtube"></i></a>
+        <a class="icon-first-div" href="#"><i class="fab fa-facebook"></i></a>
+        
+      
+    </div>
+    
+    <div>
+      <h3 class="headerjumbo center">LETS MAKE YOUR YOGA ROUTINE</h3>
+    </div>
+    
+  
+    <div>
+      <h1 class="center">HELLO, I AM NATY</h1>
+    </div>
+    
+    <div>
+      <p>Find a time for yourself.
+
+        Feeling motivated in your yoga practices
+        
+        
+        I invite you to regain your well-being, mental and physical balance with a comprehensive 
+        yogi-routine, which unites the principles of three disciplines Yoga-Ayurveda-Mindfulnes.</p>
+    </div>
+    <div class="bt-1-home">
+      <a class="btn btn-success btn-xs" href="/about-me">About-Me</a>
+    </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="center index-two-divs">
+
+  <h1 class="last-div-title center">How To Start</h1>
+  <p>
+    I discovered where to start the way back to you and your own well-being.
+  </p>  
+  <p>
+    To know yourself and love that unique combination that you brought at birth, 
+    you must begin by observing yourself through the elements of nature.
+  </p>
+</div>
+<div class="card mb-3 second-section-home">
+  <div class="card-body second-section-div">
+    <p>Open yourself to the reality of being who you are.
+    </p>
+    <p> One of the rules of the Universe is that nothing is perfect</p> 
+    <p>Perfection does not exist without imperfection. </p>
+    <p>
+      Dare to be you!
+    </p>
+​    <div style="display: flex; justify-content: space-around;">
+      <div>
+        <a href="/recipes"><i class="fas fa-cookie-bite fa-3x icon-last-div"></i></a>
+        <p>Recipies</p>
+      </div>
+      <div>
+        <a href="/blog"><i class="fas fa-edit fa-3x icon-last-div"></i></a>
+        <p>Blog</p>
+      </div>
+      <div>
+        <a href="/courses"><i class="fas fa-graduation-cap fa-3x icon-last-div"></i></a>
+        <p>Courses</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card mb-3 second-section-second-div flex-column">
+  <div class="last-div">
+    <h1 class="last-div-title"> NATIKORNFELD online</h1>
+    <p>
+      
+      Different routines to make from your home
+    </p>
+    <p>Each one is a complete and different experience from the other, which
+      invites you to take the necessary breaks in your day, to help you achieve
+      physical, mental and emotional well-being.
+    </p>
+  </div>
+  
+  <div class="center">
+    <iframe width="400" height="275" src="https://www.youtube.com/embed/YWXJCHhaNXI" frameborder="0" allowfullscreen></iframe>
+        </iframe>
+  </div>
+  <div class="last-div">
+    <h1 class="last-div-title">What are you going to achieve with these yoga routines?</h1>
+    <p>
+      
+      Build a "comprehensive YOGA routine" that motivates you to maintain it over time
+    </p>
+    <p>In each of them you will find: a calendar, a guide and video, audio and pdf material.
+      You have the option of doing each one of them separately or purchasing the 3 #yoguiroutines together,
+      for a complete accompaniment plan
+    </p>
+    <p>Each of my yogi routines are a different way of
+      achieve well-being that starts from self-knowledge, acceptance and love for yourself.
+      But with an organized method with simple and practical steps so that you can soon feel the difference and
+      you feel motivated to maintain it over time.
+    </p>
+  </div>
+  <div class="index-two-divs">
+    <h1 class="last-div-title"> These classes are for you if.</h1>
+    
+    <p class="last-div" >You want a physical activity that also connects you with yourself.
+
+      Include Yoga resources that teach you to pause your days and find well-being.
+      
+      Feeling motivated with your daily practice with achievable challenges.
+      
+      You need to recharge your batteries and empower yourself and grow your self-esteem.
+      
+      You seek to reduce daily stress and learn to manage your emotions.
+      
+      Get to know and accept yourself to improve your relationship with yourself and with others.
+    </p>
+  </div>
+  <br>
+  <div>
+    {% include 'message_form.html' %}
+  </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

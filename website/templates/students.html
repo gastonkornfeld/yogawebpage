@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA Students{% endblock %}
+
+
+
+{% block content%}
+
+
+{% if user.email == 'natikorn@gmail.com' %}
+{% include 'navbar.html' %} 
+
+<div class="center">
+    <h1>HERE you can see all the students register in your classes</h1>
+    <p>Aqui puedes visualizar los alumnos inscriptos en tus clases</p>
+  </div>
+
+<section class="container-fluid p-3 my-3 bg-dark text-white">
+    
+    <h1>STUDENTS</h1>
+    <table style="width:100%" class="table table-info">
+        <tr>
+            <th>Name</th>
+            <th>Email </th>
+            
+            <th>Username</th>
+            <th>User since</th>
+            <th>other info</th>
+            <th>DELETE</th>
+        </tr>
+          
+          
+
+
+
+
+
+{% for stud in students %}
+    
+
+
+
+
+
+
+
+        <tr style="background-color: mediumseagreen;">
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.email }}</td>
+            
+            
+            
+            <td>{{ stud.username }}</td>
+            
+            <td>{{ stud.created_at }}</td>
+            <td> {{ stud.other_info}}</td>
+            {% if stud.email != 'natikorn@gmail.com' %}
+            <td>
+                <a class="btn btn-danger btn-xs" href="/delete-student/{{ stud.id }}">Delete the Student</a>
+            </td>
+            {% endif %}
+        </tr>
+{% endfor %}
+
+
+    </table>
+  
+</section>
+
+{% else %}
+
+
+<h1>You want to be a student?</h1>
+<h2> Send me an email to natikorn@gmail.com</h2>
+
+
+{% endif %}
+{% endblock %}
+
+

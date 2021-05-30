@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA BLOG{% endblock %}
+
+{% include 'navbar.html' %} 
+
+{% block content%}
+
+
+<header class="jumbotron post-header">
+  <div class="main-jumbo-index"></div>
+    
+    
+    <div style="padding: 100px 20px;">
+      <h3 class="headerjumbo center"> POST DETAILS</h3>
+    </div>
+    
+  
+    
+    
+    
+    
+  </div>
+</header>
+
+
+
+
+<div class="card mb-3" style="background-color: wheat;">
+    <h5 class="card-title post-title center"> {{ post.title }}</h5>
+    <img class="card-img-top" style="max-width: 1000px; margin: auto; " src="{{ post.image_url }}" alt="Card image cap">
+    <div class="card-body">
+      
+      <p class="card-text"><strong>{{ post.main_content}} </strong></p>
+      <hr>
+      <div class="card-text post-details">
+        <strong> DESCRIPTION </strong>
+        {% for descr_paragraph in post_description %}
+          <p> {{descr_paragraph}}</p>
+
+        {% endfor %}
+      </div>
+      <p class="card-text"><small class="text-muted"> Creation date {{ post.created_at.strftime('%B %d, %Y, %H:%M') }}</small></p>
+    </div>
+  </div>
+ 
+
+  <p class="card-text center"><a class="btn btn-success btn-lg" href="/blog">Back to Blog</a></p> 
+
+{% endblock %}

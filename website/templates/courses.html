@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+{% block title %}CHANCHITO YOGA COURSES{% endblock %}
+
+
+
+
+{% include 'navbar.html' %}
+{% block content%}
+ 
+<header class="jumbotron header2">
+  <div class="main-jumbo-index"></div>
+    
+    
+    <div style="padding: 100px 20px;">
+      <h3 class="headerjumbo center">WELCOME TO CHANCHICOURSES</h3>
+    </div>
+    
+  
+    
+    
+    
+    
+  </div>
+</header>
+<div class="main-div-courses">
+  <div style="padding: 40px;" class="center">
+    
+    <p>Here i want to show you all the different possibilities for you to take my classes always thinking in the best for your needs</p>
+  </div>
+  {% for course in courses %}
+  <div class="card text-center courses-div">
+      <div class="card-header courses-title">
+        <strong>NAME OF THE COURSE: </strong>{{ course.name_of_course}}
+        
+      </div>
+      <div class="card-body">
+        <h5>TYPE OF COURSE: <small>{{course.type_of_course}}</small></h5>
+        <p class="card-text price"><strong>COURSE PRICE: </strong> {{ course.price }}</p>
+        <a href="/course/{{ course.id }}" class="btn btn-success btn-xs">View Description</a>
+      </div>
+      <div class="card-footer">
+        PLEASE <a href="#message-form"> CONTACT US </a> IF YOU NEED ANY SPECIAL TREATMENTS OR SCHEDULE
+      </div>
+    </div>
+  {% if user.email == 'natikorn@gmail.com' %}
+    <p class="card-text center"><a class="btn btn-danger btn-lg" href="/delete-course/{{ course.id }}">Delete the course {{course.name_of_course}}</a></p>
+  {% endif %}
+  {% endfor %}
+
+  {% include 'message_form.html' %}
+
+</div>
+{% endblock %}

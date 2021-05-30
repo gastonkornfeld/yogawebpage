@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Course {{ course.name_of_course}}{% endblock %}
+
+
+{% include 'navbar.html' %} 
+{% block content%}
+
+
+
+<div class="card mb-3 course-details">
+  <h5 style="padding: 20px; margin: 20px;" class="center"> COURSE: {{ course.name_of_course}},  {{ course.type_of_course }}</h5>
+  
+    
+    <div class="card-body">
+      <h5> <strong>DESCRIPTION OF THE COURSE </strong></h5>
+      {% for descr_paragraph in course_description %}
+        <p> {{descr_paragraph}}</p>
+
+      {% endfor %}
+      
+      
+      
+      <p class="price">  PRICE: {{ course.price }}</p>
+      
+      
+      <p class="card-text"><small> Creation date {{ course.created_at.strftime('%B %d, %Y, %H:%M') }}</small></p>
+      <div class="card-footer">
+        <p> IF YOU WANT TO SUSCRIBE TO THIS COURSE SEND ME AN EMAIL TO: <a href="mailto:natikorn@gmail.com">natikorn@gmail.com</a></p>
+      </div>
+    </div>
+</div>
+<div class="center">
+  <a class="btn btn-success btn-lg" href="/courses">Back to Courses</a> 
+</div>
+
+{% endblock %}

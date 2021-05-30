@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-c" id="navbar">
+      <div class="navbar-nav">
+        {% if user.email == 'natikorn@gmail.com' %}
+        <a class="nav-item nav-link" id="home" href="/">Home</a>
+        <a class="nav-item nav-link" id="home" href="/add-yoga-post"> Add Yoga Post</a>
+        <a class="nav-item nav-link" id="logout" href="/add-recipe">Add recipe</a>
+        <a class="nav-item nav-link" id="signUp" href="/register">Add Student</a>
+        <a class="nav-item nav-link" id="signUp" href="/add-course">Add Course</a>
+        <a class="nav-item nav-link" id="home" href="/messages">Messages</a>
+        <a class="nav-item nav-link" id="logout" href="/suscribers">Newsletter Suscribers</a>
+        <a class="nav-item nav-link" id="signUp" href="/students">Students</a>
+        <a class="nav-item nav-link" id="signUp" href="/courses">Courses</a>
+        <a class="nav-item nav-link" id="signUp" href="/blog">blog</a>
+        <a class="nav-item nav-link" id="signUp" href="/recipes"> Recipes </a>
+        <a class="nav-item nav-link" id="login" href="/about-me">About me</a>
+        <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+        {% else %}
+        <a class="nav-item nav-link" id="signUp" href="/">Home</a>
+        <a class="nav-item nav-link" id="login" href="/about-me">About me</a>
+        <a class="nav-item nav-link" id="signUp" href="/blog"> Blog </a>
+        <a class="nav-item nav-link" id="signUp" href="/recipes"> Recipes </a>
+        <a class="nav-item nav-link" id="signUp" href="/courses"> Courses </a>
+        <a class="nav-item nav-link" id="signUp" href="/login"> Login </a>
+        
+        {% endif %}
+      </div>
+    </div>
+  </nav>

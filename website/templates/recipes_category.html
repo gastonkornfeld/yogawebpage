@@ -1,0 +1,60 @@
+
+
+
+
+{% extends "base.html" %}
+
+{% block title %} Recipes Categories{% endblock %}
+
+
+{% include 'navbar.html' %}
+{% block content%}
+
+
+<header class="jumbotron header8">
+    <div class="main-jumbo-categories">
+     
+      
+      <div>
+        <h3 class="headerjumbo center">RECIPES. KORNFELD NATALIA</h3>
+      </div>
+      
+    
+      <div>
+        <h1 class="center">I WANT TO SHARE  MY RECIPES</h1>
+      </div>
+      
+      <div>
+        <p class="center">Here you can find different recipes categories.</p>
+      </div>
+      
+      </div>
+    </div>
+  </header>
+
+<div class="container-fluid">
+    <ul class="category-list center">
+
+    {% for category in categories %}
+
+    <li> <i class="fas fa-utensils fa-2x icon-first-div"></i> <a href="recipes/{{category.category_name}}">{{ category.category_name }} RECIPES</a></li>
+    <br>
+    
+    {% if user.email == 'natikorn@gmail.com' %}
+    <a class="btn btn-danger btn-xs" href="/delete-category/{{ category.id }}">Delete This category ({{category.category_name}})</a>
+    
+    
+    
+    <br>
+    {% endif %}
+    <hr>    
+
+    {% endfor %}
+</ul>
+</div>
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}About me{% endblock %}
+
+{% include 'navbar.html' %}
+{% block content%}
+
+<div class="center">
+    <h1>This is the about-me section</h1>
+    <p>Take a time to know me.</p>
+</div>
+<div class="about-me-main-div">
+    <div>
+        <img class="first-image-about-me" src="static/images/chela1.jpg" alt="about-me">
+    </div>
+    <br>
+    <br>
+    
+    <div class="card mb-3 justify-c" style="max-width: 1200px; background-color: wheat;">
+        <div class="row g-0">
+            <div class="col-md-4 img-about-me center">
+                <img src="static/images/about-me2.jpg" alt="...">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body flex-column">
+                <div>
+                    <h5 class="card-title about-me-title">More about me</h5>
+                </div>
+                <div>
+                    <p class="card-text">
+                        Yoga teacher, chef by vocation and eager for birth,
+                        I always looked for ways to calm the mental noise and walk a little more calmly.
+                        From the beginning I knew that keeping my body active was a good start,
+                        but all physical activities always ended up boring me.
+                        Until one day suddenly, I came across yoga.
+                    </p> 
+                </div>
+                <div>
+                    <p>
+
+                        I think the most wonderful thing that I discovered in these years practicing and teaching yoga,
+                        is that even when we arrive with the sole objective of improving our physical performance,
+                        the road will end up forking, showing us broader knowledge that there can be no
+                        balance without imbalance, or physical improvement without better breathing or two practices that are repeated;
+                        because our body, like our mind, goes through states that change all day, every day.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Yoga gives us at the end of the road a very simple idea: everything is connected. Our ailments
+                        physical, our way of breathing, our daily emotions. And only knowing in depth the way
+                        in that the parts operate in the whole we will perhaps be able to feel more a little happier.
+                    </p>
+                </div>
+                <div>
+                    <p class="card-text"><small class="text-muted">Kornfeld natalia</small></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+<div class="card bg-dark">
+    <img src="static/images/yoga-home.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Classes to suit you</h5>
+      <ul>
+        <li class="card-text">  Private classes </li>
+
+        <li class="card-text">Group classes </li>
+        
+        <li class="card-text">Virtual School</li>
+        
+       
+      </ul>
+      
+      <a class="btn btn-success btn-xs" href="/courses">Courses</a>
+    </div>
+  </div>
+
+<div>
+{% include 'message_form.html' %}
+</div>
+
+{% endblock %}

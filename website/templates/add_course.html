@@ -1,0 +1,86 @@
+
+{% extends "base.html" %} {% block title %}Add A Course{% endblock %} {% block
+    content %}
+{% if user.email == 'natikorn@gmail.com' %}
+{% include 'navbar.html' %}     
+<div class="content-section">
+  <form action="" method="POST">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">CREATE A NEW COURSE FOR YOUR SCHOOL. (CREAR NUEVO CURSO) </legend>
+        <div class="form-group">
+            {{ form.name.label(class='form-control-label') }}
+
+            {% if form.name.errors %}
+                {{ form.name(class='form-control form-control-lg is-invalid') }}
+                <div class="invalid-feedback">
+                    {% for error in form.name.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.name(class='form-control form-control-lg') }}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.type_of_course.label(class='form-control-label') }}
+
+            {% if form.type_of_course.errors %}
+                {{ form.type_of_course(class='form-control form-control-lg is-invalid') }}
+                <div class="invalid-feedback">
+                    {% for error in form.type_of_course.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.type_of_course(class='form-control form-control-lg') }}
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.price.label(class='form-control-label') }}
+
+            {% if form.price.errors %}
+                {{ form.price(class='form-control form-control-lg is-invalid') }}
+                <div class="invalid-feedback">
+                    {% for error in form.price.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.price(class='form-control form-control-lg') }}
+            {% endif %}
+        </div>
+
+    
+        <div class="form-group">
+            {{ form.description.label(class='form-control-label') }}
+
+            {% if form.description.errors %}
+                {{ form.description(class='form-control form-control-lg is-invalid') }}
+                <div class="invalid-feedback">
+                    {% for error in form.description.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.description(class='form-control form-control-lg') }}
+            {% endif %}
+        </div>
+
+
+        
+      
+
+       
+          
+      </fieldset>
+
+      <div class="form-group">
+          {{ form.submit(class='btn btn-outline-info') }}
+      </div>
+  </form>
+</div>
+
+{% endif %}
+{% endblock %}
